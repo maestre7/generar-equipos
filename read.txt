@@ -1,0 +1,7 @@
+﻿Crear una web en la que se puede intruducir nombres en una lista e ir mostrandolos.
+Con un boton que toma un numero para saber la gente que forma un equipo y mostrar equipos aleatorios,
+y mostrarlo.
+
+- html 
+- css
+- js
