@@ -7,7 +7,7 @@
 	</head>
 	<body>
 		<section>
-			<form name="teams" onsubmit="validateInputTeams()">
+			<form name="teams" onsubmit="return validateInputTeams()" action="javascript:createTeams()">
 				<!-- Con el for lo asociamos a un input en teoria lo hace automaticamente -->
 				<label for="members"> Miembros por equipo </label> 
 				<input type="number" name="members" id="members" value="2" min="2" max="20" required />
