@@ -1,0 +1,17 @@
+header {
+    text-align: center;
+    background-color: rgba(0, 255, 255, 0.411);
+    color: rgb(62, 62, 173);
+}
+
+main section h2 {
+    text-decoration: underline;
+}
+
+main section form input {
+    border: 2px solid coral;
+}
+
+main section form button:hover {
+    background-color: darkgray;
+}
