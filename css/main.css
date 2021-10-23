@@ -44,6 +44,7 @@
 }
 
 .teams > div {
+	margin-top: 5px; 
 	display: flex;
 	flex-direction: row;            
 	flex-wrap: wrap; 
@@ -55,5 +56,9 @@
 	height: 1px;
 	background-color: black;
 	width: 80%;
+}
+
+input[type=number] {
+  width: 35px;
 }
 /****** footer *******/
