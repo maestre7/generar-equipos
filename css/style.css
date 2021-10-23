@@ -39,7 +39,9 @@
 }
 
 .teams > div > ul > div {
-	text-decoration: underline red; 
+	text-decoration: underline; 
+	text-decoration-color: #00FFFF;
+	text-decoration-thickness: 3px;
 	padding-bottom: 5px;
 }
 

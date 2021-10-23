@@ -1,9 +1,6 @@
 ﻿
 //JS
 
-let membersArray = ["Traidor", "Desalmado", "Juampi", "Lucia", "Desde casa", "En directo", "Presencial"];
-//let no-primera = false;
-
 // Verificamos que los miembros por equipo no sean menos de dos, ni mas que la gente disponible.
 // Si todo esta bien llamamos a la function que montara y mostrara los equipos
 function validateInputTeams() {
@@ -13,7 +10,7 @@ function validateInputTeams() {
 	if (membersTeams < 2) {
 		alert("No puede haber menos de dos miembros por equipo");
 		return false;
-	} else if (membersArray.length <= membersTeams) {
+	} else if (listNames.length <= membersTeams) {
 		alert("No tienes suficientes gente para hacer dos equipos");
 		return false;
 	} else {	
@@ -26,7 +23,7 @@ function createTeams() {
 	// Recuperamos el numero de miembros por equipo del input(members) del form(teams)
 	let membersTeams = document.forms["teams"]["members"].value;
 
-	let myMembers = membersArray.slice();
+	let myMembers = listNames.slice();
 	let teamControl = 1;
 	
 	createGroup();
