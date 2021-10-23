@@ -1,11 +1,59 @@
-﻿// Buenas practicas CSS
+﻿/* Buenas practicas CSS
 
 /****** generic classes*******/
-styles goes here…
+
 /****** header *******/
-styles goes here…
+
 /****** nav menu *******/
-styles goes here…
+
 /****** main content *******/
-styles goes here…
+
+.teams {
+	display: flex;
+	flex-direction: row;            
+	flex-wrap: wrap; 
+	width: 80%;
+	justify-content: center;
+	margin-left: 80px;
+	margin-right: 80px;
+}
+.teams > form {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.teams > div > ul {
+	border: 0.2px inset black;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-top: 5px; 
+}
+
+.teams > div > ul > div {
+	text-decoration: underline red; 
+	padding-bottom: 5px;
+}
+
+.teams > div {
+	display: flex;
+	flex-direction: row;            
+	flex-wrap: wrap; 
+	justify-content: center;
+}
+
+.line {
+	margin-top: 20px;
+	height: 1px;
+	background-color: black;
+	width: 80%;
+}
 /****** footer *******/
