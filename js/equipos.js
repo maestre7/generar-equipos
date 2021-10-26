@@ -43,6 +43,8 @@ function createTeams() {
 
 		includeMembers(teamArray, teamControl);
 		teamControl += 1;
+		
+		//if (myMembers.length < 0) //discriminar lo miembros sobrantes
 	}
 	includeLine();
 }
