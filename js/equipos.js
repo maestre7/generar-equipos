@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 ﻿
 //JS
 let listNames = [];
@@ -97,7 +95,6 @@ function createGroup() {
 }
 
 
->>>>>>> Stashed changes
 function team2() {
     let elementList = document.getElementById("name_list") // Lista
     let newElementListOne = document.createElement('li'); // Campo
@@ -110,10 +107,4 @@ function team2() {
 
 function validateAdd() {
     return true;
-<<<<<<< Updated upstream
 }
-
-let listNames = [];
-=======
-}
->>>>>>> Stashed changes
