@@ -1,13 +1,42 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
-	<head> 
-		<title></title>
-		<link rel="stylesheet" href="css/style.css">
-		<script src="js/equipos.js"></script>
-	</head>
-	<body>
-		<main>
-			<section class="teams">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        EQUIPOS
+    </title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/equipos.js">
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>
+            TEAM SELECTOR
+        </h1>
+    </header>
+    <main>
+        <section class="addNames">
+            <h2>
+                Añadir nombres
+            </h2>
+            <form onsubmit="return validateAdd()" action="javascript:team2()" id="Form_name">
+                <input type="text" id="Add_name" min="1" max="30" required />
+                <button type="submit">
+                Seleccionar
+            </button>
+            </form>
+            <h3>
+                Nombres
+            </h3>
+            <div id="Names">
+                <ul id="name_list">
+                </ul>
+            </div>
+        </section>
+		<section class="teams">
 				<div class='line'>
 				</div>
 				<form name="teams" onsubmit="return validateInputTeams()" action="javascript:createTeams()">
@@ -21,7 +50,14 @@
 				<!-- Aqui añadimos los equipos formados con JS -->
 				<div class="teams">				
 				</div>
-			</section>
-		</main>
-	</body>
+		</section>
+    </main>
+
+    <footer>
+        <div>
+            &copy; Copyright -Alfredo & Sol-
+        </div>
+    </footer>
+
+</body>
 </html>

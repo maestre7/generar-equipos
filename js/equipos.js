@@ -1,5 +1,7 @@
+
 ﻿
 //JS
+let listNames = [];
 
 // Verificamos que los miembros por equipo no sean menos de dos, ni mas que la gente disponible.
 // Si todo esta bien llamamos a la function que montara y mostrara los equipos
@@ -92,3 +94,20 @@ function createGroup() {
 	let newElementDiv = document.createElement('div');
 	elementTeams.appendChild(newElementDiv);	
 }
+
+
+function team2() {
+    let elementList = document.getElementById("name_list") // Lista
+    let newElementListOne = document.createElement('li'); // Campo
+    let value_in = document.getElementById('Add_name').value; // Valor in
+    newElementListOne.innerHTML = value_in; // Integrantes del equipo
+    listNames.push(value_in);
+    elementList.appendChild(newElementListOne); // Añadir campo a lista
+}
+
+function validateAdd() {
+    return true;
+}
+
+
+
