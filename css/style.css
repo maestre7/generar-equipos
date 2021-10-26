@@ -1,0 +1,30 @@
+header {
+    text-align: center;
+    background-color: rgba(48, 161, 161, 0.349);
+    color: rgb(55, 55, 66);
+}
+
+main section h2 {
+    text-decoration: underline;
+}
+
+main section form input {
+    border: 2px solid rgb(37, 159, 180);
+}
+
+main section form button:hover {
+    background-color: darkgray;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+main {
+    min-height: calc(100% - 4rem);
+}
+
+footer {
+    height: 4rem;
+}
