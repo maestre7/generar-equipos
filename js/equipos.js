@@ -1,5 +1,4 @@
 
-﻿
 //JS
 let listNames = [];
 
@@ -23,32 +22,35 @@ function validateInputTeams() {
 
 function createTeams() {
 	// Recuperamos el numero de miembros por equipo del input(members) del form(teams)
-	let membersTeams = document.forms["teams"]["members"].value;
-
+	let membersTeams = parseInt(document.forms["teams"]["members"].value);
+	let groupTeams = [];
 	let myMembers = listNames.slice();
-	let teamControl = 1;
-	
+	let firts = true;
+	// Creamos el grupo donde se muestra la remesa de equipos
 	createGroup();
+	// formamos los teams
 	while (myMembers.length != 0) {
-		let teamArray = [];
 
-		for (selectControl=0; selectControl != membersTeams; selectControl++) {
+		if ((myMembers.length % membersTeams) == 0) {
 
-			let positionRandom = getRandomArbitrary(0, (myMembers.length))
+			groupTeams.push(createTeam(myMembers, membersTeams));
+		} else if (myMembers.length > (membersTeams*2)){
+			let newMembersTeams = (membersTeams + 1);
 
-			if (myMembers[positionRandom] != "undefined") {
-				teamArray.push(...myMembers.splice(positionRandom, 1));
-			} else {
-				break;
+			groupTeams.push(createTeam(myMembers, newMembersTeams));
+		} else {
+			if (firts) {
+				membersTeams = Math.ceil(myMembers.length / 2);
+				firts = false;
 			}
+			groupTeams.push(createTeam(myMembers, membersTeams));
 		}
-
-		includeMembers(teamArray, teamControl);
-		teamControl += 1;
-		
-		//if (myMembers.length < 0) //discriminar lo miembros sobrantes
 	}
-	includeLine();
+	// Añadimos los teams al grupo donde se muestran
+	for (teamControl=0; groupTeams.length != teamControl; teamControl++) {
+		includeMembers(groupTeams[teamControl], teamControl);
+	}
+	includeLine(); // separador
 }
 
 // Retorna un número aleatorio entre min (incluido) y max (excluido)
@@ -94,6 +96,24 @@ function createGroup() {
 	let newElementDiv = document.createElement('div');
 	elementTeams.appendChild(newElementDiv);	
 }
+
+// Creamos los equipos individuales
+function createTeam(myMembers, membersTeams) {
+	let teamArray = [];
+
+	for (selectControl=0; selectControl != membersTeams; selectControl++) {
+		let positionRandom = getRandomArbitrary(0, (myMembers.length));
+
+		if (myMembers[positionRandom] != "undefined") {
+			teamArray.push(...myMembers.splice(positionRandom, 1));
+		} else {
+			break;
+		}
+	}
+
+	return teamArray
+}
+
 
 
 function team2() {
