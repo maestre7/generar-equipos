@@ -1,4 +1,67 @@
 
+.teams {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: center;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.teams>form {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.teams>div>ul {
+    border: 0.2px inset black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.teams>div>ul>div {
+    text-decoration: underline;
+    text-decoration-color: rgb(37, 159, 180);
+    text-decoration-thickness: 3px;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+.teams>div {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.line {
+    margin-top: 20px;
+    height: 1px;
+    background-color: black;
+    width: 80%;
+}
+
+input[type=number] {
+    width: 35px;
+}
+
+input[type=submit]:hover {
+    background-color: darkgray;
+}
+
+
 
 .teams {
 	display: flex;
@@ -57,6 +120,7 @@ input[type=number] {
 }
 
 
+
 header {
     text-align: center;
     background-color: rgba(48, 161, 161, 0.349);
@@ -75,6 +139,10 @@ main section form button:hover {
     background-color: darkgray;
 }
 
+main section form button {
+    border: 2px solid rgb(37, 159, 180);
+}
+
 html,
 body {
     height: 100%;
@@ -87,4 +155,14 @@ main {
 footer {
     height: 4rem;
 }
+
+
+#name_list {
+    list-style: none;
+}
+
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
 
