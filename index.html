@@ -52,6 +52,23 @@
             <div class="teams">
             </div>
         </section>
+
+		<section class="teams">
+				<div class='line'>
+				</div>
+				<form name="teams" onsubmit="return validateInputTeams()" action="javascript:createTeams()">
+					<!-- Con el for lo asociamos a un input en teoria lo hace automaticamente -->
+					<label for="members"> Miembros por equipo </label> 
+					<input type="number" name="members" id="members" value="2" min="2" max="20" required />
+					<input type="submit" value="Formar Equipos" />
+				</form>
+				<div class='line'>
+				</div>
+				<!-- Aqui añadimos los equipos formados con JS -->
+				<div class="teams">				
+				</div>
+		</section>
+
     </main>
 
     <footer>
@@ -61,5 +78,4 @@
     </footer>
 
 </body>
-
 </html>
