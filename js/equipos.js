@@ -18,18 +18,6 @@
          return true;
      }
 
-     let membersTeams = document.forms["teams"]["members"].value;
-
-     if (membersTeams < 2) {
-         alert("No puede haber menos de dos miembros por equipo");
-         return false;
-     } else if (listNames.length <= membersTeams) {
-         alert("No tienes suficientes gente para hacer dos equipos");
-         return false;
-     } else {
-         return true;
-     }
-
  }
 
 
@@ -95,8 +83,6 @@
 
  // Retorna un número aleatorio entre min (incluido) y max (excluido)
  function getRandomArbitrary(min, max) {
-
-     return Math.floor(Math.random() * (max - min)) + min;
 
      return Math.floor(Math.random() * (max - min)) + min;
 
