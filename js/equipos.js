@@ -26,6 +26,8 @@ function createTeams() {
 	let groupTeams = [];
 	let myMembers = listNames.slice();
 	let firts = true;
+	
+	includeLine(); // separador
 	// Creamos el grupo donde se muestra la remesa de equipos
 	createGroup();
 	// formamos los teams
@@ -50,7 +52,7 @@ function createTeams() {
 	for (teamControl=0; groupTeams.length != teamControl; teamControl++) {
 		includeMembers(groupTeams[teamControl], teamControl);
 	}
-	includeLine(); // separador
+	//includeLine(); // separador
 }
 
 // Retorna un número aleatorio entre min (incluido) y max (excluido)
@@ -61,7 +63,7 @@ function getRandomArbitrary(min, max) {
 // Creamos las listas de los miembros en html y las rellenamos
 function includeMembers(teamArray, teamControl) {
 
-	let elementTeams = document.querySelector("div.teams > div:last-child");	
+	let elementTeams = document.querySelector("div.teams > div:first-child");	//last-child
 
 	let newElementList = document.createElement('ul');
 	let newElementDiv = document.createElement('div');
@@ -80,21 +82,20 @@ function includeMembers(teamArray, teamControl) {
 
 // Creamos linea divisoria
 function includeLine() {
-	
 	let elementTeams = document.querySelector("div.teams");
 	let newElementLine = document.createElement('div');
 	let myAttribute = document.createAttribute("class");
 	myAttribute.value = "line";
 	newElementLine.setAttributeNode(myAttribute);
 	
-	elementTeams.appendChild(newElementLine);
+	elementTeams.prepend(newElementLine);
 }
 
 // Añadimos un div para cada grupo de equipos
 function createGroup() {
 	let elementTeams = document.querySelector("div.teams");
 	let newElementDiv = document.createElement('div');
-	elementTeams.appendChild(newElementDiv);	
+	elementTeams.prepend(newElementDiv);	//appendChild
 }
 
 // Creamos los equipos individuales
