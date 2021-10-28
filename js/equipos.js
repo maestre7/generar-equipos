@@ -1,5 +1,4 @@
-﻿
-//JS
+﻿//JS
 let listNames = [];
 
 // Verificamos que los miembros por equipo no sean menos de dos, ni mas que la gente disponible.

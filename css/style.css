@@ -75,7 +75,7 @@ main section form input {
 }
 
 main section form button:hover {
-    background-color: darkgray;
+    background-color: rgb(172, 170, 170);
 }
 
 main section form button {
