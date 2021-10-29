@@ -42,9 +42,10 @@
 	flex-direction: row;            
 	flex-wrap: wrap; 
 	justify-content: center;
+}
 
 .line {
-    margin-top: 20px;
+	margin-top: 20px; 
     height: 1px;
     background-color: black;
     width: 80%;
