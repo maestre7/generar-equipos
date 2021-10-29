@@ -42,6 +42,7 @@
 	flex-direction: row;            
 	flex-wrap: wrap; 
 	justify-content: center;
+}
 
 .line {
     margin-top: 20px;
