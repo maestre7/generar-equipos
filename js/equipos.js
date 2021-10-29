@@ -26,21 +26,19 @@ function createTeams() {
 	let groupTeams = [];
 	let myMembers = listNames.slice();
 	let firts = true;
-	
 	includeLine(); // separador
 	// Creamos el grupo donde se muestra la remesa de equipos
 	createGroup();
 	// formamos los teams
 	while (myMembers.length != 0) {
-
 		if ((myMembers.length % membersTeams) == 0) {
-
 			groupTeams.push(createTeam(myMembers, membersTeams));
-		} else if (myMembers.length > (membersTeams*2)){
+		} 
+		else if (myMembers.length > (membersTeams * 2)) {
 			let newMembersTeams = (membersTeams + 1);
-
 			groupTeams.push(createTeam(myMembers, newMembersTeams));
-		} else {
+		} 
+		else {
 			if (firts) {
 				membersTeams = Math.ceil(myMembers.length / 2);
 				firts = false;
@@ -52,13 +50,14 @@ function createTeams() {
 	for (teamControl=0; groupTeams.length != teamControl; teamControl++) {
 		includeMembers(groupTeams[teamControl], teamControl);
 	}
-	//includeLine(); // separador
 }
+
 
 // Retorna un número aleatorio entre min (incluido) y max (excluido)
 function getRandomArbitrary(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
+
 
 // Creamos las listas de los miembros en html y las rellenamos
 function includeMembers(teamArray, teamControl) {
@@ -74,11 +73,10 @@ function includeMembers(teamArray, teamControl) {
 		let newElementListOne = document.createElement('li');
 		newElementListOne.innerHTML = v; // Integrantes del equipo
 		newElementList.appendChild(newElementListOne);
-	}
-	
+	}	
 	elementTeams.appendChild(newElementList);
-
 }
+
 
 // Creamos linea divisoria
 function includeLine() {
@@ -91,12 +89,14 @@ function includeLine() {
 	elementTeams.prepend(newElementLine);
 }
 
+
 // Añadimos un div para cada grupo de equipos
 function createGroup() {
 	let elementTeams = document.querySelector("div.teams");
 	let newElementDiv = document.createElement('div');
-	elementTeams.prepend(newElementDiv);	//appendChild
+	elementTeams.prepend(newElementDiv);
 }
+
 
 // Creamos los equipos individuales
 function createTeam(myMembers, membersTeams) {
@@ -111,6 +111,21 @@ function createTeam(myMembers, membersTeams) {
 			break;
 		}
 	}
-
 	return teamArray
 }
+
+
+function team2() {
+     let elementList = document.getElementById("name_list") // Lista
+     let newElementListOne = document.createElement('li'); // Campo
+     let value_in = document.getElementById('Add_name').value; // Valor in
+     newElementListOne.innerHTML = value_in; // Integrantes del equipo
+     listNames.push(value_in);
+     elementList.appendChild(newElementListOne); // Añadir campo a lista
+     document.getElementById("Add_name").value = "";
+ }
+
+ function validateAdd() {
+     return true;
+
+ }
