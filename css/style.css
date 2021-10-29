@@ -1,49 +1,47 @@
 .teams {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 80%;
-    justify-content: center;
-    margin-left: 80px;
-    margin-right: 80px;
+	display: flex;
+	flex-direction: row;            
+	flex-wrap: wrap; 
+	width: 80%;
+	justify-content: center;
+	margin-left: 80px;
+	margin-right: 80px;
 }
 
-.teams>form {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    margin-left: 5px;
-    margin-right: 5px;
+.teams > form {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	margin-left: 5px;
+	margin-right: 5px;
 }
 
-.teams>div>ul {
-    border: 0.2px inset black;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    margin-top: 5px;
+.teams > div > ul {
+	border: 0.2px inset black;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-top: 5px; 
 }
 
-.teams>div>ul>div {
-    text-decoration: underline;
-    text-decoration-color: rgb(37, 159, 180);
-    text-decoration-thickness: 3px;
-    padding-bottom: 5px;
-    font-weight: bold;
+.teams > div > ul > div {
+	text-decoration: underline; 
+	text-decoration-color: #00FFFF;
+	text-decoration-thickness: 3px;
+	padding-bottom: 5px;
 }
 
-.teams>div {
-    margin-top: 5px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+.teams > div {
+	margin-top: 5px; 
+	display: flex;
+	flex-direction: row;            
+	flex-wrap: wrap; 
+	justify-content: center;
 
 .line {
     margin-top: 20px;
